@@ -371,7 +371,15 @@ ${Object.keys(animeData)
           </a>
           {t("madeBy")}
           <a
-            href="https://github.com/egoist/anime-sedai"
+            href="https://github.com/adwinying"
+            target="_blank"
+            className="underline"
+          >
+            adwin
+          </a>
+          {t("remixedBy")}
+          <a
+            href="https://github.com/adwinying/anime-sedai-mal"
             target="_blank"
             className="underline"
           >
@@ -391,19 +399,6 @@ ${Object.keys(animeData)
             </a>
           </div>
         )}
-
-        <div className="text-center">
-          {t("otherProducts")}
-          <a
-            href="https://chatwise.app"
-            target="_blank"
-            className="underline inline-flex items-center gap-1"
-          >
-            <img src="https://chatwise.app/favicon.png" className="size-4" />{" "}
-            ChatWise
-          </a>
-          {t("aiChatClient")}
-        </div>
       </div>
     </>
   )

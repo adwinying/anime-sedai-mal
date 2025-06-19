@@ -2,9 +2,9 @@ export type Language = 'jp' | 'en'
 
 export const translations = {
   jp: {
-    title: 'アニメ世代',
+    title: 'アニメ世代MAL',
     subtitle: '観たアニメをタップして選択してください',
-    website: 'anime-sedai.egoist.dev',
+    website: 'iadw.in/anime-sedai-mal',
     watchedCount: '{{total}}本中{{count}}本のアニメを観ました',
     selectAll: 'すべて選択',
     clear: 'クリア',
@@ -22,8 +22,9 @@ export const translations = {
     promptZako: '雑魚❤',
     copy: 'コピー',
     openInChatWise: 'ChatWiseで開く (インストールが必要です)',
-    footer: '毎年最も注目されたアニメ。データは bgm.tv より。制作: ',
-    madeBy: '製',
+    footer: '毎年最も注目されたアニメ。データは MAL の最ももっとも人気のアニメによって収集されている。制作: ',
+    madeBy: '、加工: ',
+    remixedBy: '。',
     viewCode: 'コードを見る',
     otherProducts: '作者の他の作品: ',
     aiChatClient: '、エレガントなAIチャットクライアント',
@@ -36,9 +37,9 @@ export const translations = {
     english: 'English'
   },
   en: {
-    title: 'Anime Sedai',
+    title: 'Anime Sedai MAL',
     subtitle: 'Click to select anime you have watched',
-    website: 'anime-sedai.egoist.dev',
+    website: 'iadw.in/anime-sedai-mal',
     watchedCount: 'I have watched {{count}}/{{total}} anime',
     selectAll: 'Select All',
     clear: 'Clear',
@@ -56,8 +57,9 @@ export const translations = {
     promptZako: 'Zako❤',
     copy: 'Copy',
     openInChatWise: 'Open in ChatWise (installation required)',
-    footer: 'Most watched anime by year, data from bgm.tv, made by ',
-    madeBy: ', ',
+    footer: 'Data sourced from MAL\'s Most Popular Anime grouped by year, made by ',
+    madeBy: ', remixed by ',
+    remixedBy: ', ',
     viewCode: 'View Code',
     otherProducts: 'Other products by the author: ',
     aiChatClient: ', an elegant AI chat client',
