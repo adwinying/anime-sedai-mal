@@ -5,8 +5,8 @@ import { translations, type Language } from './i18n'
 interface I18nContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: keyof typeof translations.zh, interpolations?: Record<string, string | number>) => string
-  isZh: boolean
+  t: (key: keyof typeof translations.jp, interpolations?: Record<string, string | number>) => string
+  isjp: boolean
   isEn: boolean
 }
 
@@ -16,9 +16,9 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     try {
       const saved = localStorage.getItem('language')
-      return saved ? JSON.parse(saved) : 'zh'
+      return saved ? JSON.parse(saved) : 'jp'
     } catch {
-      return 'zh'
+      return 'jp'
     }
   })
 
@@ -31,9 +31,9 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     }
   }
 
-  const t = (key: keyof typeof translations.zh, interpolations?: Record<string, string | number>) => {
+  const t = (key: keyof typeof translations.jp, interpolations?: Record<string, string | number>) => {
     const currentTranslations = translations[language]
-    let text = currentTranslations[key] || translations.zh[key] || key
+    let text = currentTranslations[key] || translations.jp[key] || key
     
     if (interpolations) {
       Object.entries(interpolations).forEach(([placeholder, value]) => {
@@ -48,7 +48,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     language,
     setLanguage,
     t,
-    isZh: language === 'zh',
+    isjp: language === 'jp',
     isEn: language === 'en'
   }
 

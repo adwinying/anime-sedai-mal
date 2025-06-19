@@ -85,11 +85,11 @@ ${Object.keys(animeData)
 
     const sliceItems = items.slice(0, 12)
     const watched = sliceItems
-      .filter((item) => selectedAnime.includes(getAnimeTitle(item, "zh")))
+      .filter((item) => selectedAnime.includes(getAnimeTitle(item, "jp")))
       .map((item) => getAnimeTitle(item, language))
       .join(", ")
     const unWatched = sliceItems
-      .filter((item) => !selectedAnime.includes(getAnimeTitle(item, "zh")))
+      .filter((item) => !selectedAnime.includes(getAnimeTitle(item, "jp")))
       .map((item) => getAnimeTitle(item, language))
       .join(", ")
 
@@ -107,7 +107,7 @@ ${Object.keys(animeData)
   }, [selectedAnime, promptType, language, t])
 
   const totalAnime = Object.values(animeData).flatMap((year) => {
-    return year.map((item) => getAnimeTitle(item, "zh")).slice(0, 12)
+    return year.map((item) => getAnimeTitle(item, "jp")).slice(0, 12)
   }).length
 
   return (
@@ -160,7 +160,7 @@ ${Object.keys(animeData)
                     </div>
                     <div className="flex shrink-0">
                       {items.slice(0, 12).map((item) => {
-                        const animeKey = getAnimeTitle(item, "zh")
+                        const animeKey = getAnimeTitle(item, "jp")
                         const displayTitle = getAnimeTitle(item, language)
                         const isSelected = selectedAnime.includes(animeKey)
                         return (
@@ -241,7 +241,7 @@ ${Object.keys(animeData)
               setSelectedAnime(
                 Object.values(animeData).flatMap((year) => {
                   return year
-                    .map((item) => getAnimeTitle(item, "zh"))
+                    .map((item) => getAnimeTitle(item, "jp"))
                     .slice(0, 12)
                 })
               )
@@ -360,14 +360,14 @@ ${Object.keys(animeData)
           {t("footer")}
           <a
             href={
-              language === "zh"
+              language === "jp"
                 ? "https://x.com/localhost_4173"
                 : "https://x.com/localhost_5173"
             }
             target="_blank"
             className="underline"
           >
-            {language === "zh" ? "低空飞行" : "egoist"}
+            {language === "jp" ? "低空飞行" : "egoist"}
           </a>
           {t("madeBy")}
           <a

@@ -775,9 +775,9 @@ const data: Data = {
 // 添加一个辅助函数来根据语言获取动画标题
 export const getAnimeTitle = (
   anime: AnimeItem,
-  language: "zh" | "en"
+  language: "jp" | "en"
 ): string => {
-  return language === "zh" ? anime.titleZh : anime.titleEn
+  return language === "jp" ? anime.titleZh : anime.titleEn
 }
 
 export default data
