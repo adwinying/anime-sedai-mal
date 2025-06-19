@@ -1,14 +1,4 @@
-type AnimeItem = {
-  titleJp: string
-  titleEn: string
-  score: number
-}
-
-type Data = {
-  [key: string]: AnimeItem[]
-}
-
-const data: Data = {
+{
   "2006": [
     {
       "titleEn": "Ouran Koukou Host Club",
@@ -1188,13 +1178,3 @@ const data: Data = {
     }
   ]
 }
-
-// 添加一个辅助函数来根据语言获取动画标题
-export const getAnimeTitle = (
-  anime: AnimeItem,
-  language: "jp" | "en"
-): string => {
-  return language === "jp" ? anime.titleJp : anime.titleEn
-}
-
-export default data

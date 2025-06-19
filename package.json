@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite dev"
+    "dev": "vite dev",
+    "update-data": "bun run update-data.ts"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.7",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0",
+    "jsdom": "^26.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
